@@ -50,7 +50,7 @@ document.querySelector("#reset").addEventListener("click", function () {
     dice1 = 0, dice2 = 0, dice3 = 0, dice4 = 0;
 
     for (i = 0; i < 4; i++) {
-        document.querySelectorAll("img")[i].setAttribute("src", "images/dice6.png");
+        document.querySelectorAll(".dice")[i].setAttribute("src", "images/dice.png");
         document.querySelector("h1").textContent = "Dice Game";
     }
 

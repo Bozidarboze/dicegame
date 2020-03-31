@@ -10,12 +10,22 @@ img {
 
 h1 {
   font-size: 5rem;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
   color: #c81912;
 }
 
 button {
   width: 20%;
+}
+
+.container-fluid {
+  text-align: center;
+  padding: 2% 12%;
+}
+
+.gif {
+  width: 10%;
+  margin: 0;
 }
 
 .btn-danger {
@@ -35,11 +45,6 @@ button {
   margin: 2rem 0 2rem;
 }
 
-.container-fluid {
-  text-align: center;
-  padding: 5% 12%;
-}
-
 .padding {
   padding: 0 7%;
 }
@@ -51,7 +56,7 @@ button {
   }
 
   .container-fluid {
-    padding: 10% 7%;
+    padding: 5% 7%;
   }
 }
 
@@ -62,7 +67,7 @@ button {
   }
 
   .container-fluid {
-    padding: 15% 7%;
+    padding: 12% 7%;
   }
 }
 
@@ -92,7 +97,7 @@ button {
   }
 
   .container-fluid {
-    padding-top: 30%;
+    padding-top: 25%;
   }
 
   .player {
