@@ -87,6 +87,14 @@ button {
     margin-bottom: 2rem;
   }
 
+  button {
+    width: 100px;
+  }
+
+  .container-fluid {
+    padding-top: 30%;
+  }
+
   .player {
     width: 100px;
   }
