@@ -18,7 +18,7 @@ h2 {
 
 .container-fluid {
   text-align: center;
-  padding: 3% 12%;
+  padding: 5% 12%;
 }
 
 .btn-lg {
@@ -28,7 +28,7 @@ h2 {
 @media (max-width:1200px){
   h1 {
     font-size: 3rem;
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
   }
 
   img {
@@ -39,5 +39,11 @@ h2 {
 @media (max-width:720px){
   h1 {
     font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .container-fluid {
+    padding: 5% 10%;
   }
 }
+
