@@ -60,7 +60,7 @@ button {
   }
 }
 
-@media(max-width: 850px){
+@media (max-width: 850px){
   h1 {
     font-size: 3rem;
     margin-bottom: 3rem;
@@ -86,7 +86,7 @@ button {
   }
 }
 
-@media(max-width:540px){
+@media (max-width:540px){
   h1 {
     font-size: 2rem;
     margin-bottom: 2rem;
@@ -106,3 +106,8 @@ button {
 
 }
 
+@media (max-width: 767px) and (orientation:landscape){
+  .container-fluid {
+    padding: 0 7%;
+  }
+}
