@@ -1,0 +1,43 @@
+body {
+  background-color: #00a8cc;
+  color: #fff;
+}
+
+img {
+  width: 250px;
+}
+
+h1 {
+  font-size: 5rem;
+  margin-bottom: 5rem;
+}
+
+h2 {
+  margin: 1rem 1rem 2rem;
+}
+
+.container-fluid {
+  text-align: center;
+  padding: 3% 12%;
+}
+
+.btn-lg {
+  width: 200px;
+}
+
+@media (max-width:1200px){
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 5rem;
+  }
+
+  img {
+    width: 150px;
+  }
+}
+
+@media (max-width:720px){
+  h1 {
+    font-size: 2rem;
+  }
+}
