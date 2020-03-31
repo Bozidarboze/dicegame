@@ -27,19 +27,37 @@
     <h1>Dice Game</h1>
 
     <div class="row">
-      <div class="col-sm-6">
-        <img id="dice1" src="images/dice6.png" alt="">
-        <h2>Player 1</h2>
+      <div class="col-6 padding">
+        <div class="row">
+          <div class="col-md-6">
+            <img id="dice1" src="images/dice6.png" alt="dice-img">
+          </div>
+          <div class="col-md-6">
+            <img id="dice2" src="images/dice6.png" alt="dice-img">
+          </div>
+        </div>
+        <button id="p1" class="btn btn-light">Player 1</button>
       </div>
-      <div class="col-sm-6">
-        <img id="dice2" src="images/dice6.png" alt="">
-        <h2>Player 2</h2>
+      <div class="col-6 padding">
+        <div class="row">
+          <div class="col-md-6">
+            <img id="dice3" src="images/dice6.png" alt="dice-img">
+          </div>
+          <div class="col-md-6">
+            <img id="dice4" src="images/dice6.png" alt="dice-img">
+          </div>
+          <div class="col-md">
+            <button id="p2" class="btn btn-light">Player 2</button>
+          </div>
+        </div>
+
       </div>
     </div>
 
-    <button class="btn btn-lg btn-light">Roll Dice</button>
+    <button id="reset" class="btn btn-lg btn-light">Reset</button>
 
   </div>
+
 
   <script src="index.js"></script>
 </body>
