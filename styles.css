@@ -27,12 +27,19 @@ h2 {
 
 @media (max-width:1200px){
   h1 {
-    font-size: 3rem;
-    margin-bottom: 3rem;
+    font-size: 4rem;
+    margin-bottom: 4rem;
   }
 
-  img {
-    width: 150px;
+  .container-fluid {
+    padding: 10% 7%;
+  }
+}
+
+@media(max-width: 850px){
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
   }
 }
 
@@ -42,8 +49,8 @@ h2 {
     margin-bottom: 2rem;
   }
 
-  .container-fluid {
-    padding: 10% 7%;
+  img {
+    width:150px;
   }
 }
 
