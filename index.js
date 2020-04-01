@@ -13,6 +13,9 @@ document.querySelector("#p1").addEventListener("click", function () {
         document.querySelector("h1").textContent = winner;
     }
 
+    var diceRollSound = new Audio("sounds/dice-roll.mp3");
+    diceRollSound.play();
+
     this.disabled = true;
 
 });
@@ -29,6 +32,9 @@ document.querySelector("#p2").addEventListener("click", function () {
     if (dice1 != 0) {
         document.querySelector("h1").textContent = winner;
     }
+
+    var diceRollSound = new Audio("sounds/dice-roll.mp3");
+    diceRollSound.play();
 
     this.disabled = true;
 
