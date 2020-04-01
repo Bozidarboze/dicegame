@@ -1,6 +1,7 @@
 body {
   background-color: #1b262c;
   color: #fff;
+  overflow: hidden;
 }
 
 img {
@@ -106,7 +107,7 @@ h1 {
 
 }
 
-@media (max-width: 850px) and (max-height: 660px){
+@media (min-width: 540px) and (max-width: 850px) and (max-height: 660px){
   .container-fluid {
     padding: 0 7%;
   }
