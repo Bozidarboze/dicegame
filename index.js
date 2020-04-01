@@ -7,13 +7,7 @@ document.querySelector("#p1").addEventListener("click", function () {
     document.querySelector("#dice1").setAttribute("src", "images/dice" + dice1 + ".png");
     document.querySelector("#dice2").setAttribute("src", "images/dice" + dice2 + ".png");
 
-    if (dice1 + dice2 > dice3 + dice4) {
-        winner = "🏆Winner is Player 1!🏆";
-    } else if (dice1 + dice2 < dice3 + dice4) {
-        winner = "🏆Winner is Player 2!🏆";
-    } else {
-        winner = "Draw!";
-    }
+    checkWinner();
 
     if (dice3 != 0) {
         document.querySelector("h1").textContent = winner;
@@ -30,13 +24,7 @@ document.querySelector("#p2").addEventListener("click", function () {
     document.querySelector("#dice3").setAttribute("src", "images/dice" + dice3 + ".png");
     document.querySelector("#dice4").setAttribute("src", "images/dice" + dice4 + ".png");
 
-    if (dice1 + dice2 > dice3 + dice4) {
-        winner = "🏆Winner is Player 1!🏆";
-    } else if (dice1 + dice2 < dice3 + dice4) {
-        winner = "🏆Winner is Player 2!🏆";
-    } else {
-        winner = "Draw!";
-    }
+    checkWinner();
 
     if (dice1 != 0) {
         document.querySelector("h1").textContent = winner;
@@ -58,4 +46,14 @@ document.querySelector("#reset").addEventListener("click", function () {
     document.querySelector("#p2").disabled = false;
 
 })
+
+function checkWinner() {
+    if (dice1 + dice2 > dice3 + dice4) {
+        winner = "🏆Winner is Player 1!🏆";
+    } else if (dice1 + dice2 < dice3 + dice4) {
+        winner = "🏆Winner is Player 2!🏆";
+    } else {
+        winner = "Draw!";
+    }
+}
 
