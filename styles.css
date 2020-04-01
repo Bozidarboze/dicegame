@@ -14,7 +14,7 @@ h1 {
   color: #c81912;
 }
 
-button {
+#reset {
   width: 20%;
 }
 
@@ -92,7 +92,7 @@ button {
     margin-bottom: 2rem;
   }
 
-  button {
+  #reset {
     width: 100px;
   }
 
@@ -104,4 +104,16 @@ button {
     width: 100px;
   }
 
+}
+
+@media (max-width: 850px) and (max-height: 660px){
+  .container-fluid {
+    padding: 0 7%;
+  }
+
+  #reset {
+    position: relative;
+    bottom: 73px;
+  }
+  
 }
