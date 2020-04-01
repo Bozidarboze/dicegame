@@ -99,7 +99,7 @@ h1 {
   }
 
   .container-fluid {
-    padding-top: 25%;
+    padding: 25% 5%;
   }
 
   .player {
