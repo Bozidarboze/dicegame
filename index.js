@@ -110,7 +110,6 @@ function checkWinner() {
         draw = false;
     } else {
         winner = "Draw!";
-        draw = true;
         if (score1 == score2 && $("#players2").hasClass("active")
             || score1 == score2 && score3 != 0 && $("#players3").hasClass("active")
             || score1 == score2 && score3 != 0 && score4 != 0 && $("#players4").hasClass("active")) {
