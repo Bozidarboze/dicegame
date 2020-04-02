@@ -8,6 +8,10 @@ $(".p1").click(function () {
     score1 = dice1 + dice2;
     checkWinner();
     setWinner();
+<<<<<<< HEAD
+=======
+
+>>>>>>> 908a9175f68ad9b6da9185f3492007372a576814
 });
 
 $(".p2").click(function () {
@@ -17,6 +21,10 @@ $(".p2").click(function () {
     score2 = dice3 + dice4;
     checkWinner();
     setWinner();
+<<<<<<< HEAD
+=======
+
+>>>>>>> 908a9175f68ad9b6da9185f3492007372a576814
 });
 
 $(".p3").click(function () {
@@ -26,6 +34,10 @@ $(".p3").click(function () {
     score3 = dice5 + dice6;
     checkWinner();
     setWinner();
+<<<<<<< HEAD
+=======
+
+>>>>>>> 908a9175f68ad9b6da9185f3492007372a576814
 });
 
 $(".p4").click(function () {
@@ -35,6 +47,10 @@ $(".p4").click(function () {
     score4 = dice7 + dice8;
     checkWinner();
     setWinner();
+<<<<<<< HEAD
+=======
+
+>>>>>>> 908a9175f68ad9b6da9185f3492007372a576814
 });
 
 $("#reset").click(function () {
@@ -80,6 +96,7 @@ function playerRoll(dicec1, dicec2, buttonPressed, button1, button2, button3, bd
         $(dicec2).attr("src", "images/dice" + dices2 + ".png");
     }, 400);
 
+<<<<<<< HEAD
     if (draw != true) {
         $(button1).prop("disabled", true);
         $(button2).prop("disabled", true);
@@ -90,6 +107,18 @@ function playerRoll(dicec1, dicec2, buttonPressed, button1, button2, button3, bd
             if (bd3 == 0 && draw != true) { $(button3).prop("disabled", false); }
         }, 600);
     }
+=======
+
+    $(button1).prop("disabled", true);
+    $(button2).prop("disabled", true);
+    $(button3).prop("disabled", true);
+    setTimeout(() => {
+        if (bd1 == 0) { $(button1).prop("disabled", false); }
+        if (bd2 == 0) { $(button2).prop("disabled", false); }
+        if (bd3 == 0) { $(button3).prop("disabled", false); }
+    }, 600);
+
+>>>>>>> 908a9175f68ad9b6da9185f3492007372a576814
 
     var diceRollSound = new Audio("sounds/dice-roll.mp3");
     diceRollSound.play();
@@ -110,6 +139,7 @@ function checkWinner() {
         draw = false;
     } else {
         winner = "Draw!";
+<<<<<<< HEAD
         if (score1 == score2) {
             $(".p1").prop("disabled", false);
             $(".p2").prop("disabled", false);
@@ -135,6 +165,9 @@ function checkWinner() {
             $(".p4").prop("disabled", false);
             draw = true;
         }
+=======
+
+>>>>>>> 908a9175f68ad9b6da9185f3492007372a576814
     }
 };
 
