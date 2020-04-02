@@ -126,8 +126,6 @@ $("#players2").click(function () {
     $(".players4").addClass("hidden");
     $("#players3").removeClass("active");
     $("#players4").removeClass("active");
-    $("img").removeClass("width3");
-    $("img").removeClass("width4");
     reset();
 });
 
@@ -147,7 +145,5 @@ $("#players4").click(function () {
     $(".players3").addClass("hidden");
     $("#players2").removeClass("active");
     $("#players3").removeClass("active");
-    $("img").removeClass("width3");
-    $("img").addClass("width4");
     reset();
 });
