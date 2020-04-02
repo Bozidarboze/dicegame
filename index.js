@@ -1,3 +1,4 @@
+var diceRollSound = new Audio("sounds/dice-roll.mp3");
 var dice1 = 0, dice2 = 0, dice3 = 0, dice4 = 0, dice5 = 0, dice6 = 0, dice7 = 0, dice8 = 0,
     dices1, dices2, score1 = 0, score2 = 0, score3 = 0, score4 = 0, winner, draw;
 
@@ -91,7 +92,7 @@ function playerRoll(dicec1, dicec2, buttonPressed, button1, button2, button3, bd
         }, 600);
     }
 
-    var diceRollSound = new Audio("sounds/dice-roll.mp3");
+    diceRollSound = new Audio("sounds/dice-roll.mp3");
     diceRollSound.play();
 };
 
