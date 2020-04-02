@@ -8,6 +8,14 @@ $(".p1").click(function () {
     score1 = dice1 + dice2;
     checkWinner();
     setWinner();
+    $(".p2").prop("disabled", true);
+    $(".p3").prop("disabled", true);
+    $(".p4").prop("disabled", true);
+    setTimeout(() => {
+        if (dice3 == 0) { $(".p2").prop("disabled", false); }
+        if (dice5 == 0) { $(".p3").prop("disabled", false); }
+        if (dice7 == 0) { $(".p4").prop("disabled", false); }
+    }, 600);
 });
 
 $(".p2").click(function () {
@@ -17,6 +25,14 @@ $(".p2").click(function () {
     score2 = dice3 + dice4;
     checkWinner();
     setWinner();
+    $(".p1").prop("disabled", true);
+    $(".p3").prop("disabled", true);
+    $(".p4").prop("disabled", true);
+    setTimeout(() => {
+        if (dice1 == 0) { $(".p1").prop("disabled", false); }
+        if (dice5 == 0) { $(".p3").prop("disabled", false); }
+        if (dice7 == 0) { $(".p4").prop("disabled", false); }
+    }, 600);
 });
 
 $(".p3").click(function () {
@@ -26,6 +42,14 @@ $(".p3").click(function () {
     score3 = dice5 + dice6;
     checkWinner();
     setWinner();
+    $(".p1").prop("disabled", true);
+    $(".p2").prop("disabled", true);
+    $(".p4").prop("disabled", true);
+    setTimeout(() => {
+        if (dice1 == 0) { $(".p1").prop("disabled", false); }
+        if (dice3 == 0) { $(".p2").prop("disabled", false); }
+        if (dice7 == 0) { $(".p4").prop("disabled", false); }
+    }, 600);
 });
 
 $(".p4").click(function () {
@@ -35,6 +59,14 @@ $(".p4").click(function () {
     score4 = dice7 + dice8;
     checkWinner();
     setWinner();
+    $(".p1").prop("disabled", true);
+    $(".p2").prop("disabled", true);
+    $(".p3").prop("disabled", true);
+    setTimeout(() => {
+        if (dice1 == 0) { $(".p1").prop("disabled", false); }
+        if (dice3 == 0) { $(".p2").prop("disabled", false); }
+        if (dice5 == 0) { $(".p3").prop("disabled", false); }
+    }, 600);
 });
 
 $("#reset").click(function () {
