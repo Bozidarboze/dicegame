@@ -16,10 +16,35 @@
   <link rel="preload" href="images/dice4.png" as="image">
   <link rel="preload" href="images/dice5.png" as="image">
   <link rel="preload" href="images/dice6.png" as="image">
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
 
 </head>
 
 <body>
+
+  <nav class="navbar navbar-dark navbar-expand-sm">
+    <button class="navbar-toggler ml-auto custom-toggler" type="button" data-toggle="collapse" data-target="#menu"
+      aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ml-auto mr-auto">
+        <button id="players2" class="active nav-item btn btn-danger">2 Players</button>
+        <button id="players3" class="nav-item btn btn-danger">3 Players</button>
+        <button id="players4" class="nav-item btn btn-danger">4 Players</button>
+      </ul>
+    </div>
+
+  </nav>
 
   <div class="container-fluid">
 
@@ -29,27 +54,67 @@
     <div class="row">
       <div class="col-6 padding">
         <div class="row">
-          <div class="col-md-6">
-            <img id="dice1" class="dice" src="images/dice.png" alt="dice-img">
+          <div class="col-6">
+            <img class="dice dice1" src="images/dice.png" alt="dice-img">
           </div>
-          <div class="col-md-6">
-            <img id="dice2" class="dice" src="images/dice.png" alt="dice-img">
+          <div class="col-6">
+            <img class="dice dice2" src="images/dice.png" alt="dice-img">
           </div>
         </div>
-        <button id="p1" class="player btn btn-danger">Player 1</button>
+        <button class="p1 player btn btn-danger">Player 1</button>
       </div>
       <div class="col-6 padding">
         <div class="row">
-          <div class="col-md-6">
-            <img id="dice3" class="dice" src="images/dice.png" alt="dice-img">
+          <div class="col-6">
+            <img class="dice dice3" src="images/dice.png" alt="dice-img">
           </div>
-          <div class="col-md-6">
-            <img id="dice4" class="dice" src="images/dice.png" alt="dice-img">
+          <div class="col-6">
+            <img class="dice dice4" src="images/dice.png" alt="dice-img">
           </div>
         </div>
-        <button id="p2" class="player btn btn-danger">Player 2</button>
+        <button class="p2 player btn btn-danger">Player 2</button>
       </div>
     </div>
+
+    <div class="players3 row hidden">
+      <div class="col-6 ml-auto mr-auto padding">
+        <div class="row">
+          <div class="col-6">
+            <img class="dice dice5" src="images/dice.png" alt="dice-img">
+          </div>
+          <div class="col-6">
+            <img class="dice dice6" src="images/dice.png" alt="dice-img">
+          </div>
+        </div>
+        <button class="p3 player btn btn-danger">Player 3</button>
+      </div>
+    </div>
+
+    <div class="players4 row hidden">
+      <div class="col-6 padding">
+        <div class="row">
+          <div class="col-6">
+            <img class="dice dice5" src="images/dice.png" alt="dice-img">
+          </div>
+          <div class="col-6">
+            <img class="dice dice6" src="images/dice.png" alt="dice-img">
+          </div>
+        </div>
+        <button class="p3 player btn btn-danger">Player 3</button>
+      </div>
+      <div class="col-6 padding">
+        <div class="row">
+          <div class="col-6">
+            <img class="dice dice7" src="images/dice.png" alt="dice-img">
+          </div>
+          <div class="col-6">
+            <img class="dice dice8" src="images/dice.png" alt="dice-img">
+          </div>
+        </div>
+        <button class="p4 player btn btn-danger">Player 4</button>
+      </div>
+    </div>
+
 
     <button id="reset" class="btn btn-lg btn-danger">Reset</button>
 

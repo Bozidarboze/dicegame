@@ -1,13 +1,11 @@
 body {
   background-color: #1b262c;
   color: #fff;
-  overflow: hidden;
   font-family: 'Do Hyeon', sans-serif;
 }
 
 img {
   width: 90%;
-  margin: 5%;
 }
 
 h1 {
@@ -19,14 +17,33 @@ h1 {
   width: 20%;
 }
 
+.custom-toggler.navbar-toggler {
+  border-color: #9d0b0b;
+}
+.custom-toggler .navbar-toggler-icon {
+background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(157, 11, 11, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.nav-item {
+  margin: 0 1rem;
+}
+
 .container-fluid {
   text-align: center;
   padding: 2% 12%;
 }
 
+.width3 {
+  width: 60%;
+}
+
 .gif {
   width: 10%;
   margin: 0;
+}
+
+.col-6 {
+  padding-right: 0;
 }
 
 .btn-danger {
@@ -48,6 +65,10 @@ h1 {
 
 .padding {
   padding: 0 7%;
+}
+
+.hidden {
+  display: none;
 }
 
 @media (max-width:1200px){
