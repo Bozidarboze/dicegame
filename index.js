@@ -110,39 +110,58 @@ function checkWinner() {
         draw = false;
     } else {
         winner = "Draw!";
+        draw = true;
         if (score1 == score2 && $("#players2").hasClass("active")
             || score1 == score2 && score3 != 0 && $("#players3").hasClass("active")
             || score1 == score2 && score3 != 0 && score4 != 0 && $("#players4").hasClass("active")) {
+            if (draw == true) {
+                score3 = score4 = 1;
+            }
             $(".p1").prop("disabled", false);
             $(".p2").prop("disabled", false);
             draw = true;
         } else if (score1 == score3 && $("#players2").hasClass("active")
             || score1 == score3 && score2 != 0 && $("#players3").hasClass("active")
             || score1 == score3 && score2 != 0 && score4 != 0 && $("#players4").hasClass("active")) {
+            if (draw == true) {
+                score2 = score4 = 1;
+            }
             $(".p1").prop("disabled", false);
             $(".p3").prop("disabled", false);
             draw = true;
         } else if (score1 == score4 && $("#players2").hasClass("active")
             || score1 == score4 && score2 != 0 && $("#players3").hasClass("active")
             || score1 == score4 && score2 != 0 && score3 != 0 && $("#players4").hasClass("active")) {
+            if (draw == true) {
+                score2 = score3 = 1;
+            }
             $(".p1").prop("disabled", false);
             $(".p4").prop("disabled", false);
             draw = true;
         } else if (score2 == score3 && $("#players2").hasClass("active")
             || score2 == score3 && score1 != 0 && $("#players3").hasClass("active")
             || score2 == score3 && score1 != 0 && score4 != 0 && $("#players4").hasClass("active")) {
+            if (draw == true) {
+                score1 = score4 = 1;
+            }
             $(".p2").prop("disabled", false);
             $(".p3").prop("disabled", false);
             draw = true;
         } else if (score2 == score4 && $("#players2").hasClass("active")
             || score2 == score4 && score1 != 0 && $("#players3").hasClass("active")
             || score2 == score4 && score1 != 0 && score3 != 0 && $("#players4").hasClass("active")) {
+            if (draw == true) {
+                score1 = score3 = 1;
+            }
             $(".p2").prop("disabled", false);
             $(".p4").prop("disabled", false);
             draw = true;
         } else if (score3 == score4 && $("#players2").hasClass("active")
             || score3 == score4 && score1 != 0 && $("#players3").hasClass("active")
             || score3 == score4 && score1 != 0 && score2 != 0 && $("#players4").hasClass("active")) {
+            if (draw == true) {
+                score1 = score2 = 1;
+            }
             $(".p3").prop("disabled", false);
             $(".p4").prop("disabled", false);
             draw = true;
