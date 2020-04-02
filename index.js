@@ -172,11 +172,6 @@ function reset() {
     $(".p4").prop("disabled", false);
 }
 
-function saveScore() {
-    save1 = score1;
-    save2 = score2;
-}
-
 $("#players2").click(function () {
     $("#players2").addClass("active");
     $(".players3").addClass("hidden");
