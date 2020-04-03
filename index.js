@@ -3,6 +3,9 @@ var dice1 = 0, dice2 = 0, dice3 = 0, dice4 = 0, dice5 = 0, dice6 = 0, dice7 = 0,
     dices1, dices2, score1 = 0, score2 = 0, score3 = 0, score4 = 0, winner, draw;
 
 $(".p1").click(function () {
+    if (draw == true) {
+        ifDraw(".p1");
+    }
     playerRoll(".dice1", ".dice2", ".p1", ".p2", ".p3", ".p4", score2, score3, score4);
     dice1 = dices1;
     dice2 = dices2;
@@ -12,6 +15,9 @@ $(".p1").click(function () {
 });
 
 $(".p2").click(function () {
+    if (draw == true) {
+        ifDraw(".p2");
+    }
     playerRoll(".dice3", ".dice4", ".p2", ".p1", ".p3", ".p4", score1, score3, score4);
     dice3 = dices1;
     dice4 = dices2;
@@ -21,6 +27,9 @@ $(".p2").click(function () {
 });
 
 $(".p3").click(function () {
+    if (draw == true) {
+        ifDraw(".p3");
+    }
     playerRoll(".dice5", ".dice6", ".p3", ".p1", ".p2", ".p4", score1, score2, score4);
     dice5 = dices1;
     dice6 = dices2;
@@ -30,6 +39,9 @@ $(".p3").click(function () {
 });
 
 $(".p4").click(function () {
+    if (draw == true) {
+        ifDraw(".p4");
+    }
     playerRoll(".dice7", ".dice8", ".p4", ".p1", ".p2", ".p3", score1, score2, score3);
     dice7 = dices1;
     dice8 = dices2;
@@ -116,74 +128,93 @@ function checkWinner() {
         winner = "Draw!";
         draw = true;
         score3 = score4 = 1;
-        $(".p1").prop("disabled", false);
-        $(".p2").prop("disabled", false);
+        setTimeout(() => {
+            $(".p1").prop("disabled", false);
+            $(".p2").prop("disabled", false);
+        }, 600);
 
     } else if (score1 == score3 && score2 != 0 && score1 > score2 && $("#players3").hasClass("active")
         || score1 == score3 && score2 != 0 && score4 != 0 && score1 > score2 && score1 > score4 && $("#players4").hasClass("active")) {
         winner = "Draw!";
         draw = true;
         score2 = score4 = 1;
-        $(".p1").prop("disabled", false);
-        $(".p3").prop("disabled", false);
-
+        setTimeout(() => {
+            $(".p1").prop("disabled", false);
+            $(".p3").prop("disabled", false);
+        }, 600);
     } else if (score1 == score4 && score2 != 0 && score3 != 0 && score1 > score2 && score1 > score3 && $("#players4").hasClass("active")) {
         winner = "Draw!";
         draw = true;
         score2 = score3 = 1;
-        $(".p1").prop("disabled", false);
-        $(".p4").prop("disabled", false);
+        setTimeout(() => {
+            $(".p1").prop("disabled", false);
+            $(".p4").prop("disabled", false);
+        }, 600);
 
     } else if (score2 == score3 && score1 != 0 && score2 > score3 && $("#players3").hasClass("active")
         || score2 == score3 && score1 != 0 && score4 != 0 && score2 > score1 && score2 > score4 && $("#players4").hasClass("active")) {
         winner = "Draw!";
         draw = true;
         score1 = score4 = 1;
-        $(".p2").prop("disabled", false);
-        $(".p3").prop("disabled", false);
+        setTimeout(() => {
+            $(".p2").prop("disabled", false);
+            $(".p3").prop("disabled", false);
+        }, 600);
 
     } else if (score2 == score4 && score1 != 0 && score3 != 0 && score2 > score1 && score2 > score3 && $("#players4").hasClass("active")) {
         winner = "Draw!";
         draw = true;
         score1 = score3 = 1;
-        $(".p2").prop("disabled", false);
-        $(".p4").prop("disabled", false);
+        setTimeout(() => {
+            $(".p2").prop("disabled", false);
+            $(".p4").prop("disabled", false);
+        }, 600);
 
     } else if (score3 == score4 && score1 != 0 && score2 != 0 && score3 > score1 && score3 > score2 && $("#players4").hasClass("active")) {
         winner = "Draw!";
         draw = true;
         score1 = score2 = 1;
-        $(".p3").prop("disabled", false);
-        $(".p4").prop("disabled", false);
+        setTimeout(() => {
+            $(".p3").prop("disabled", false);
+            $(".p4").prop("disabled", false);
+        }, 600);
 
     } else if (score1 == score2 && score1 == score3 && score4 != 0 && score1 > score4 && $("#players4").hasClass("active")) {
         winner = "Draw!";
         draw = true;
         score4 = 1;
-        $(".p1").prop("disabled", false);
-        $(".p2").prop("disabled", false);
-        $(".p3").prop("disabled", false);
+        setTimeout(() => {
+            $(".p1").prop("disabled", false);
+            $(".p2").prop("disabled", false);
+            $(".p3").prop("disabled", false);
+        }, 600);
     } else if (score1 == score2 && score1 == score4 && score3 != 0 && score1 > score3 && $("#players4").hasClass("active")) {
         winner = "Draw!";
         draw = true;
         score3 = 1;
-        $(".p1").prop("disabled", false);
-        $(".p2").prop("disabled", false);
-        $(".p4").prop("disabled", false);
+        setTimeout(() => {
+            $(".p1").prop("disabled", false);
+            $(".p2").prop("disabled", false);
+            $(".p4").prop("disabled", false);
+        }, 600);
     } else if (score1 == score3 && score1 == score4 && score2 != 0 && score1 > score2 && $("#players4").hasClass("active")) {
         winner = "Draw!";
         draw = true;
         score2 = 1;
-        $(".p1").prop("disabled", false);
-        $(".p3").prop("disabled", false);
-        $(".p4").prop("disabled", false);
+        setTimeout(() => {
+            $(".p1").prop("disabled", false);
+            $(".p3").prop("disabled", false);
+            $(".p4").prop("disabled", false);
+        }, 600);
     } else if (score2 == score3 && score2 == score4 && score1 != 0 && score2 > score1 && $("#players4").hasClass("active")) {
         winner = "Draw!";
         draw = true;
         score1 = 1;
-        $(".p2").prop("disabled", false);
-        $(".p3").prop("disabled", false);
-        $(".p4").prop("disabled", false);
+        setTimeout(() => {
+            $(".p2").prop("disabled", false);
+            $(".p3").prop("disabled", false);
+            $(".p4").prop("disabled", false);
+        }, 600);
     } else if (score1 == score2 && score1 == score3 && score4 != 0 && score1 < score4 && $("#players4").hasClass("active")) {
         winner = "🏆Winner is Player 4!🏆";
         draw = false;
@@ -223,6 +254,71 @@ function reset() {
     $(".p3").prop("disabled", false);
     $(".p4").prop("disabled", false);
 }
+
+function ifDraw(pressedButton) {
+    if (pressedButton == ".p1") {
+        $(".p2").prop("disabled", true);
+        $(".p3").prop("disabled", true);
+        $(".p4").prop("disabled", true);
+        setTimeout(() => {
+            if (score2 != 1) {
+                $(".p2").prop("disabled", false);
+            }
+            if (score3 != 1) {
+                $(".p3").prop("disabled", false);
+            }
+            if (score4 != 1) {
+                $(".p4").prop("disabled", false);
+            }
+        }, 600);
+    } else if (pressedButton == ".p2") {
+        $(".p1").prop("disabled", true);
+        $(".p3").prop("disabled", true);
+        $(".p4").prop("disabled", true);
+        setTimeout(() => {
+            if (score1 != 1) {
+                $(".p1").prop("disabled", false);
+            }
+            if (score3 != 1) {
+                $(".p3").prop("disabled", false);
+            }
+            if (score4 != 1) {
+                $(".p4").prop("disabled", false);
+            }
+        }, 600);
+    } else if (pressedButton == ".p3") {
+        $(".p1").prop("disabled", true);
+        $(".p2").prop("disabled", true);
+        $(".p4").prop("disabled", true);
+        setTimeout(() => {
+            if (score1 != 1) {
+                $(".p1").prop("disabled", false);
+            }
+            if (score2 != 1) {
+                $(".p2").prop("disabled", false);
+            }
+            if (score4 != 1) {
+                $(".p4").prop("disabled", false);
+            }
+        }, 600);
+    } else if (pressedButton == ".p4") {
+        $(".p1").prop("disabled", true);
+        $(".p3").prop("disabled", true);
+        $(".p2").prop("disabled", true);
+        setTimeout(() => {
+            if (score1 != 1) {
+                $(".p1").prop("disabled", false);
+            }
+            if (score3 != 1) {
+                $(".p3").prop("disabled", false);
+            }
+            if (score2 != 1) {
+                $(".p2").prop("disabled", false);
+            }
+        }, 600);
+    }
+}
+
 
 $("#players2").click(function () {
     $("#players2").addClass("active");
