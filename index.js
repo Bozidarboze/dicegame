@@ -124,7 +124,7 @@ function checkWinner() {
         draw = false;
     } else if (score1 == score2 && $("#players2").hasClass("active")
         || score1 == score2 && score3 != 0 && score1 > score3 && $("#players3").hasClass("active")
-        || score1 == score2 && score3 != 0 && score4 != 0 && score1 > score3 && score1 > score4 && $("#players4").hasClass("active")) {
+        || score1 == score2 && score3 != 0 && score4 != 0 && score1 > score3 && score1 > score4 && score3 != -1 && score4 != -1 && $("#players4").hasClass("active")) {
         winner = "Draw!";
         draw = true;
         score3 = score4 = 1;
@@ -134,7 +134,7 @@ function checkWinner() {
         }, 600);
 
     } else if (score1 == score3 && score2 != 0 && score1 > score2 && $("#players3").hasClass("active")
-        || score1 == score3 && score2 != 0 && score4 != 0 && score1 > score2 && score1 > score4 && $("#players4").hasClass("active")) {
+        || score1 == score3 && score2 != 0 && score4 != 0 && score1 > score2 && score1 > score4 && score2 != -1 && score4 != -1 && $("#players4").hasClass("active")) {
         winner = "Draw!";
         draw = true;
         score2 = score4 = 1;
@@ -142,7 +142,7 @@ function checkWinner() {
             $(".p1").prop("disabled", false);
             $(".p3").prop("disabled", false);
         }, 600);
-    } else if (score1 == score4 && score2 != 0 && score3 != 0 && score1 > score2 && score1 > score3 && $("#players4").hasClass("active")) {
+    } else if (score1 == score4 && score2 != 0 && score3 != 0 && score1 > score2 && score1 > score3 && score2 != -1 && score3 != -1 && $("#players4").hasClass("active")) {
         winner = "Draw!";
         draw = true;
         score2 = score3 = 1;
@@ -152,7 +152,7 @@ function checkWinner() {
         }, 600);
 
     } else if (score2 == score3 && score1 != 0 && score2 > score3 && $("#players3").hasClass("active")
-        || score2 == score3 && score1 != 0 && score4 != 0 && score2 > score1 && score2 > score4 && $("#players4").hasClass("active")) {
+        || score2 == score3 && score1 != 0 && score4 != 0 && score2 > score1 && score2 > score4 && score1 != -1 && score4 != -1 && $("#players4").hasClass("active")) {
         winner = "Draw!";
         draw = true;
         score1 = score4 = 1;
@@ -161,7 +161,7 @@ function checkWinner() {
             $(".p3").prop("disabled", false);
         }, 600);
 
-    } else if (score2 == score4 && score1 != 0 && score3 != 0 && score2 > score1 && score2 > score3 && $("#players4").hasClass("active")) {
+    } else if (score2 == score4 && score1 != 0 && score3 != 0 && score2 > score1 && score2 > score3 && score1 != -1 && score3 != -1 && $("#players4").hasClass("active")) {
         winner = "Draw!";
         draw = true;
         score1 = score3 = 1;
@@ -170,7 +170,7 @@ function checkWinner() {
             $(".p4").prop("disabled", false);
         }, 600);
 
-    } else if (score3 == score4 && score1 != 0 && score2 != 0 && score3 > score1 && score3 > score2 && $("#players4").hasClass("active")) {
+    } else if (score3 == score4 && score1 != 0 && score2 != 0 && score3 > score1 && score3 > score2 && score1 != -1 && score2 != -1 && $("#players4").hasClass("active")) {
         winner = "Draw!";
         draw = true;
         score1 = score2 = 1;
@@ -227,6 +227,66 @@ function checkWinner() {
     } else if (score2 == score3 && score2 == score4 && score1 != 0 && score2 < score1 && $("#players4").hasClass("active")) {
         winner = "🏆Winner is Player 1!🏆";
         draw = false;
+    } else if (score1 == score2 && score3 == -1) {
+        winner = "Draw!";
+        setTimeout(() => {
+            $(".p3").prop("disabled", false);
+        }, 600);
+    } else if (score1 == score2 && score4 == -1) {
+        winner = "Draw!";
+        setTimeout(() => {
+            $(".p4").prop("disabled", false);
+        }, 600);
+    } else if (score1 == score3 && score4 == -1) {
+        winner = "Draw!";
+        setTimeout(() => {
+            $(".p4").prop("disabled", false);
+        }, 600);
+    } else if (score2 == score3 && score4 == -1) {
+        winner = "Draw!";
+        setTimeout(() => {
+            $(".p4").prop("disabled", false);
+        }, 600);
+    } else if (score2 == score4 && score3 == -1) {
+        winner = "Draw!";
+        setTimeout(() => {
+            $(".p3").prop("disabled", false);
+        }, 600);
+    } else if (score2 == score3 && score1 == -1) {
+        winner = "Draw!";
+        setTimeout(() => {
+            $(".p1").prop("disabled", false);
+        }, 600);
+    } else if (score1 == score3 && score2 == -1) {
+        winner = "Draw!";
+        setTimeout(() => {
+            $(".p2").prop("disabled", false);
+        }, 600);
+    } else if (score1 == score4 && score3 == -1) {
+        winner = "Draw!";
+        setTimeout(() => {
+            $(".p3").prop("disabled", false);
+        }, 600);
+    } else if (score3 == score4 && score1 == -1) {
+        winner = "Draw!";
+        setTimeout(() => {
+            $(".p1").prop("disabled", false);
+        }, 600);
+    } else if (score2 == score4 && score1 == -1) {
+        winner = "Draw!";
+        setTimeout(() => {
+            $(".p1").prop("disabled", false);
+        }, 600);
+    } else if (score1 == score4 && score2 == -1) {
+        winner = "Draw!";
+        setTimeout(() => {
+            $(".p2").prop("disabled", false);
+        }, 600);
+    } else if (score3 == score4 && score2 == -1) {
+        winner = "Draw!";
+        setTimeout(() => {
+            $(".p2").prop("disabled", false);
+        }, 600);
     } else {
         winner = "Draw!";
     }
