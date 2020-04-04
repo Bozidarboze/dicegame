@@ -257,6 +257,16 @@ function reset() {
 
 function ifDraw(pressedButton) {
     if (pressedButton == ".p1") {
+        if (score2 != 1) {
+            score2 = -1;
+        }
+        if (score3 != 1) {
+            score3 = -1;
+        }
+        if (score4 != 1) {
+            score4 = -1;
+        }
+
         $(".p2").prop("disabled", true);
         $(".p3").prop("disabled", true);
         $(".p4").prop("disabled", true);
@@ -272,6 +282,15 @@ function ifDraw(pressedButton) {
             }
         }, 600);
     } else if (pressedButton == ".p2") {
+        if (score1 != 1) {
+            score1 = -1;
+        }
+        if (score3 != 1) {
+            score3 = -1;
+        }
+        if (score4 != 1) {
+            score4 = -1;
+        }
         $(".p1").prop("disabled", true);
         $(".p3").prop("disabled", true);
         $(".p4").prop("disabled", true);
@@ -287,6 +306,15 @@ function ifDraw(pressedButton) {
             }
         }, 600);
     } else if (pressedButton == ".p3") {
+        if (score2 != 1) {
+            score2 = -1;
+        }
+        if (score1 != 1) {
+            score1 = -1;
+        }
+        if (score4 != 1) {
+            score4 = -1;
+        }
         $(".p1").prop("disabled", true);
         $(".p2").prop("disabled", true);
         $(".p4").prop("disabled", true);
@@ -302,6 +330,15 @@ function ifDraw(pressedButton) {
             }
         }, 600);
     } else if (pressedButton == ".p4") {
+        if (score2 != 1) {
+            score2 = -1;
+        }
+        if (score3 != 1) {
+            score3 = -1;
+        }
+        if (score1 != 1) {
+            score1 = -1;
+        }
         $(".p1").prop("disabled", true);
         $(".p3").prop("disabled", true);
         $(".p2").prop("disabled", true);
