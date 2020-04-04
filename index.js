@@ -134,7 +134,7 @@ function checkWinner() {
         draw = false;
         if (score1 == -1) {
             setTimeout(() => {
-                $(".p2").prop("disabled", false);
+                $(".p1").prop("disabled", false);
             }, 600);
         }
         if (score3 == -1) {
@@ -152,12 +152,12 @@ function checkWinner() {
         draw = false;
         if (score1 == -1) {
             setTimeout(() => {
-                $(".p2").prop("disabled", false);
+                $(".p1").prop("disabled", false);
             }, 600);
         }
         if (score2 == -1) {
             setTimeout(() => {
-                $(".p3").prop("disabled", false);
+                $(".p2").prop("disabled", false);
             }, 600);
         }
         if (score4 == -1) {
@@ -170,17 +170,17 @@ function checkWinner() {
         draw = false;
         if (score1 == -1) {
             setTimeout(() => {
-                $(".p2").prop("disabled", false);
+                $(".p1").prop("disabled", false);
             }, 600);
         }
         if (score2 == -1) {
             setTimeout(() => {
-                $(".p3").prop("disabled", false);
+                $(".p2").prop("disabled", false);
             }, 600);
         }
         if (score3 == -1) {
             setTimeout(() => {
-                $(".p4").prop("disabled", false);
+                $(".p3").prop("disabled", false);
             }, 600);
         }
     } else if (score1 == score2 && $("#players2").hasClass("active")
@@ -212,7 +212,7 @@ function checkWinner() {
             $(".p4").prop("disabled", false);
         }, 600);
 
-    } else if (score2 == score3 && score1 != 0 && score2 > score3 && $("#players3").hasClass("active")
+    } else if (score2 == score3 && score1 != 0 && score2 > score1 && $("#players3").hasClass("active")
         || score2 == score3 && score1 != 0 && score4 != 0 && score2 > score1 && score2 > score4 && score1 != -1 && score4 != -1 && $("#players4").hasClass("active")) {
         winner = "Draw!";
         draw = true;
